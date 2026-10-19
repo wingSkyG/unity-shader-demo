@@ -2,6 +2,11 @@
 
 Shader "Unlit/UnlitShader"
 {
+    Properties
+    {
+        _Color ("Color", Color) = (1,1,1,1)
+    }
+    
     SubShader
     {
         Pass
@@ -11,30 +16,32 @@ Shader "Unlit/UnlitShader"
             #pragma vertex vert
             #pragma fragment frag
 
-            struct a2v
-            {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-                float2 textcoord : TEXCOORD0;
-            };
+            #include "UnityCG.cginc"
+
+            fixed4 _Color;
 
             struct v2f
             {
                 float4 pos : SV_POSITION;
-                fixed3 color : COLOR0;
+                fixed4 color : COLOR0;
             };
 
-            v2f vert (a2v v)
+            v2f vert (appdata_full v)
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.color = v.normal * .5 + fixed3(.5, .5, .5);
+
+                o.color = frac(v.texcoord1);
+                if(any(saturate(v.texcoord1) - v.texcoord1)) {
+                    o.color.b = .5;
+                }
+                o.color.a = 1.0 / 0.;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                return fixed4(i.color, 1.);
+                return i.color;
             }
 
             ENDCG
