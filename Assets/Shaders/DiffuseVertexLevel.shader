@@ -31,8 +31,6 @@ Shader "DemoShader/DiffuseVertexLevel"
                 v2f o;
 
                 o.pos = UnityObjectToClipPos(v.vertex);
-
-                // fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 
                 fixed3 worldNormal = normalize(mul(v.normal, (float3x3)unity_WorldToObject));
                 fixed3 worldLight = normalize(_WorldSpaceLightPos0.xyz);
