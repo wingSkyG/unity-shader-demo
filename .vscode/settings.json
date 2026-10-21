@@ -56,5 +56,9 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "unity-shader-demo.sln"
+    "dotnet.defaultSolution": "unity-shader-demo.sln",
+    "[shaderlab]": {
+        "editor.defaultFormatter": "slevesque.shader",
+        "editor.formatOnSave": true
+    }
 }
