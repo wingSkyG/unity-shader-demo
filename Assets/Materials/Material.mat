@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material
-  m_Shader: {fileID: 4800000, guid: fab6c6aebde05624bbe7123741d66ce1, type: 3}
+  m_Shader: {fileID: 4800000, guid: a4bc91c82da53ed4397d44bf5f1d1468, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -108,7 +108,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Gloss: 96
+    - _Gloss: 256
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
