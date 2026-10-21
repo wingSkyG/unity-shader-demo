@@ -4,7 +4,7 @@ Shader "DemoShader/SingleTexture"
     {
         _Color ("Color", Color) =  (1, 1, 1, 1)
         _Specular ("Specular", Color) =  (1, 1, 1, 1)
-        _Gloss ("Gloss", Range) =0.5
+        _Gloss ("Gloss", Range(8.0, 256.0)) = 20.0
         _MainTex ("Main Texture", 2D) = "white" {}
     }
 
@@ -32,9 +32,9 @@ Shader "DemoShader/SingleTexture"
                 fixed3 worldPos : TEXCOORD0;
                 fixed3 worldNormal : TEXCOORD1;
                 fixed2 uv : TEXCOORD2;
-            }
+            };
 
-            float4 vert(appdata_base v)
+            v2f vert(appdata_base v)
             {
                 v2f o;
 
@@ -43,7 +43,7 @@ Shader "DemoShader/SingleTexture"
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.uv = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 
-                return o.pos;
+                return o;
             }
 
             fixed4 frag(v2f i) : SV_Target
@@ -65,6 +65,6 @@ Shader "DemoShader/SingleTexture"
 
             ENDCG
         }
-    },
+    }
     FallBack "Diffuse"
 }
