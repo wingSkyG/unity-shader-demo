@@ -1,4 +1,4 @@
-Shader "DemoShader/SingleTexture"
+Shader "DemoShader/Texture/SingleTexture"
 {
     Properties
     {
@@ -27,7 +27,8 @@ Shader "DemoShader/SingleTexture"
             fixed4 _Specular;
             float _Gloss;
 
-            struct v2f {
+            struct v2f
+            {
                 float4 pos : SV_POSITION;
                 fixed3 worldPos : TEXCOORD0;
                 fixed3 worldNormal : TEXCOORD1;

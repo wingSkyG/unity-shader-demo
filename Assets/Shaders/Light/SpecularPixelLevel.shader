@@ -1,4 +1,4 @@
-Shader "DemoShader/SpecularPixelLevel"
+Shader "DemoShader/Light/SpecularPixelLevel"
 {
     Properties
     {

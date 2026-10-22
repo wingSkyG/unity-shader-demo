@@ -1,9 +1,9 @@
-Shader "DemoShader/SpecularVertexLevel"
+Shader "DemoShader/Light/SpecularVertexLevel"
 {
     Properties
     {
-        _Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
-        _Specular ("Specular", Color) = (1, 1, 1, 1)
+        _Diffuse ("Diffuse", Color) =  (1, 1, 1, 1)
+        _Specular ("Specular", Color) =  (1, 1, 1, 1)
         _Gloss ("Gloss", Range(8., 256.)) = 20
     }
 
@@ -11,7 +11,7 @@ Shader "DemoShader/SpecularVertexLevel"
     {
         Pass
         {
-            Tags {"LightMode" = "ForwardBase"}
+            Tags { "LightMode" = "ForwardBase" }
 
             CGPROGRAM
 

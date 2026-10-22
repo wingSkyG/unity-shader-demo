@@ -1,4 +1,4 @@
-Shader "DemoShader/BlinnPhong"
+Shader "DemoShader/Light/BlinnPhong"
 {
     Properties
     {

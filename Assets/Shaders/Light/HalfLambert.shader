@@ -1,15 +1,15 @@
-Shader "DemoShader/HalfLambert"
+Shader "DemoShader/Light/HalfLambert"
 {
     Properties
     {
-        _Diffuse ("Diffuse", Color) = (1,1,1,1)
+        _Diffuse ("Diffuse", Color) =  (1, 1, 1, 1)
     }
-    
+
     SubShader
     {
         Pass
         {
-            Tags {"LightMode" = "ForwardBase"}
+            Tags { "LightMode" = "ForwardBase" }
 
             CGPROGRAM
 
@@ -26,7 +26,7 @@ Shader "DemoShader/HalfLambert"
                 fixed3 worldNormal : TEXCOORD0;
             };
 
-            v2f vert (appdata_full v)
+            v2f vert(appdata_full v)
             {
                 v2f o;
 
@@ -36,7 +36,7 @@ Shader "DemoShader/HalfLambert"
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag(v2f i) : SV_Target
             {
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
 

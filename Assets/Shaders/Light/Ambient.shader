@@ -1,4 +1,4 @@
-Shader "DemoShader/Ambient"
+Shader "DemoShader/Light/Ambient"
 {
     SubShader
     {
@@ -9,7 +9,8 @@ Shader "DemoShader/Ambient"
             #pragma vertex vert
             #pragma fragment frag
 
-            struct v2f {
+            struct v2f
+            {
                 float4 pos : SV_POSITION;
                 fixed3 color : COLOR;
             };

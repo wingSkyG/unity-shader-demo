@@ -1,4 +1,4 @@
-Shader "DemoShader/CompleteBlinnPhongPixelLevel"
+Shader "DemoShader/Light/CompleteBlinnPhongPixelLevel"
 {
     Properties
     {

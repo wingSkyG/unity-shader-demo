@@ -1,4 +1,4 @@
-Shader "DemoShader/CompleteBlinnPhongVertexLevel"
+Shader "DemoShader/Light/CompleteBlinnPhongVertexLevel"
 {
     Properties
     {
