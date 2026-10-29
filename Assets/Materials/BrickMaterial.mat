@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BrickMaterial
-  m_Shader: {fileID: 4800000, guid: 17af2b7cf8233c34ca9ef621f7f7ddd4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 79c9bdbfb11a1ae408d42d2e2efc1aab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 3e2c1cc3c1aa8424e84ad01453bed3f3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 728f5fad5997e7949ba7cd5fa361b912, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 18e1c1ead11a5af4c956479f41617ac9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 11c95e824fb8aec48a2546455514e1d5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -59,9 +59,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecularMask:
+        m_Texture: {fileID: 2800000, guid: 57938f42717bed64ba794367d9d17fa2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: -0.95
+    - _BumpScale: -1.5
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -75,6 +79,7 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularScale: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
