@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DemoMaterial
-  m_Shader: {fileID: 4800000, guid: f89d96d7e043b414c97278224801f756, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1b244ef6b6169b540b872062352e0550, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -69,6 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaScale: 1
     - _BumpScale: 1
     - _Cutoff: 0
     - _DetailNormalMapScale: 1
