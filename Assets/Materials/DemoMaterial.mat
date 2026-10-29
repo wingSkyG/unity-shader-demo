@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DemoMaterial
-  m_Shader: {fileID: 4800000, guid: 1b244ef6b6169b540b872062352e0550, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02470b232b4f7f6459390499f7fdea61, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -69,9 +69,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaScale: 1
+    - _AlphaScale: 0.68
     - _BumpScale: 1
-    - _Cutoff: 0
+    - _Cutoff: 0.687
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Gloss: 8
@@ -89,7 +89,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.5235849, g: 0.9794486, b: 1, a: 1}
     - _Diffuse: {r: 0.7924528, g: 0.4672481, b: 0.4672481, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightColor: {r: 0.6536134, g: 0.9056604, b: 0.78227746, a: 1}
