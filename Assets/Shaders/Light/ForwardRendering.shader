@@ -123,9 +123,9 @@ Shader "DemoShader/Light/ForwardRendering"
                 fixed3 worldNormal = normalize(i.worldNormal);
 
                 #ifdef USING_DIRECTIONAL_LIGHT
-                fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
+                    fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
                 #else
-                fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz - i.worldPos.xyz);
+                    fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz - i.worldPos.xyz);
                 #endif
 
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * max(0, dot(worldNormal, worldLightDir));
@@ -135,17 +135,17 @@ Shader "DemoShader/Light/ForwardRendering"
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
 
                 #ifdef USING_DIRECTIONAL_LIGHT
-                fixed atten = 1.0;
+                    fixed atten = 1.0;
                 #else
-                #if defined (POINT)
-                float3 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1)).xyz;
-                fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
-                #elif defined (SPOT)
-                float4 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1));
-                fixed atten = (lightCoord.z > 0) * tex2D(_LightTexture0, lightCoord.xy / lightCoord.w + 0.5).w * tex2D(_LightTextureB0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
-                #else
-                fixed atten = 1.0;
-                #endif
+                    #if defined (POINT)
+                        float3 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1)).xyz;
+                        fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+                    #elif defined (SPOT)
+                        float4 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1));
+                        fixed atten = (lightCoord.z > 0) * tex2D(_LightTexture0, lightCoord.xy / lightCoord.w + 0.5).w * tex2D(_LightTextureB0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+                    #else
+                        fixed atten = 1.0;
+                    #endif
                 #endif
 
                 return fixed4((diffuse + specular) * atten, 1.0);
@@ -154,4 +154,5 @@ Shader "DemoShader/Light/ForwardRendering"
             ENDCG
         }
     }
+    FallBack "Specular"
 }
