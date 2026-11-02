@@ -2,6 +2,8 @@ Shader "DemoShader/Basic"
 {
     SubShader
     {
+        Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+
         Pass
         {
             CGPROGRAM
