@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ScrollingBackgroundMat
-  m_Shader: {fileID: 4800000, guid: 32f82fc70879b6d40a19149582cd9784, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7257cd11d95d43746bcd5a6ff7f3362f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ee3738b8fb22ed34485c94f48d2159bc, type: 3}
+        m_Texture: {fileID: 2800000, guid: ee79d23a0ce6e7b469c4388ce034ff38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,10 +69,13 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Frequency: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HorizontalAmount: 4
+    - _InvWaveLength: 10
+    - _Magnitude: 1
     - _Metallic: 0
     - _Mode: 0
     - _Multiplier: 1
